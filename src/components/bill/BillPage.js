@@ -6,7 +6,11 @@ class BillPage extends React.Component {
 
     render() {
         return (
-            <div></div>
+            <div>
+                <TopNav />
+                <Chatbar />
+            </div>
+            
         );
     }
 }
