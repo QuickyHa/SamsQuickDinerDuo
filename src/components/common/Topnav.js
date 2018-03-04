@@ -1,6 +1,7 @@
 import React from 'react';
+import { SideNav } from './Sidenav';
 
-class TopNav extends React.Component {
+export class TopNav extends React.Component {
     
     openNav() {
         document.getElementById("mySidenav").style.width = "250px";
@@ -8,14 +9,16 @@ class TopNav extends React.Component {
 
     render() {
         return (
-            <div className="topnav">
-                <a className="dropdown" href="javascript:void(0)" onClick={this.openNav}>&#9776;</a>
+            <div>
+                <div text-decoration="none" className="topnav">
+                    <a className="dropdown" href="javascript:void(0)" onClick={this.openNav}>&#9776;</a>
+                </div>
+                <SideNav />
             </div>
         );
     }
 }
 
-export default TopNav;
 
   /*<div>
     <div class=topnav>

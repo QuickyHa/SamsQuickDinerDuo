@@ -1,25 +1,20 @@
 import React from 'react';
-import TopNav from '../common/Topnav'
+import { TopNav } from '../common/Topnav';
+import { Chatbar } from '../common/Chatbar';
 
 
 class HomePage extends React.Component {
-    
-    login() {
-        window.location = 'SecondPage.html';
-    }
 
     render() {
         return (
-            <div>
+            <div className="homeBG">
             <TopNav />
-            <div className="wrapper">
-                <div className="welcome">
-                    <h1 className= "message">Woulasdsadsto dine here today?</h1>
-                </div>	
-                <div className="button">
-                    <button onClick={this.login} className="button1">YES</button>
+                <div className="buttons">
+                    <a href="foodmenu.html">MENU</a>
+                    <a href="ProgressPage.html">PROGRESS</a>
+                    <a href="BillPage.html">BILL</a>
                 </div>
-            </div>
+            <Chatbar />
             </div>
         );
     }
