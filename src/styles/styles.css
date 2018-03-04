@@ -633,11 +633,17 @@ h3{
 
 /*row to .billRow*/
 /* Clear floats after the columns */
-.billrow:after {
+.billRow1:after {
     content: "";
     display: table;
     clear: both;
 }
+.billRow2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 /* --------------------- @media stuff ------------------------------*/
 @media (orientation: landscape) {

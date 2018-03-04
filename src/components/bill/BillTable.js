@@ -8,6 +8,7 @@ export class BillTable extends React.Component {
         return (
             <div className = "billTable">
                 <BillRow1 />
+                <BillRow2 />
             </div>
             
         );
