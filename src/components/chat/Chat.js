@@ -6,17 +6,20 @@ export class Chat extends React.Component{
         super(props);
         this.state = { inputValue: '' };
         this.handleKeyDown = this.handleKeyDown.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
+        this.submit = this.submit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
     submit() {
-        this.props.onSubmit(this.state.inputValue);
-        this.setState({inputValue: ''});
+        if (/\S/.test(this.state.inputValue)) {
+            this.props.onSubmit(this.state.inputValue);
+            this.setState({inputValue: ''});
+        }
     }
 
     handleKeyDown(event) {
         if (event.keyCode === 13) {
+            event.preventDefault();
             this.submit();
         }
     }

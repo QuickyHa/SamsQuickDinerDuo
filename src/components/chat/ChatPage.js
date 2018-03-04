@@ -7,7 +7,7 @@ import {Chat} from './Chat';
 class ChatPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { chat: []};
+        this.state = { chat: [] };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -18,7 +18,11 @@ class ChatPage extends React.Component {
     }
 
     render() {
-        let chatList = null;
+        let currChat = this.state.chat;
+        let chatList = currChat.map((msg, i) =>
+            (i%2 === 0) ? <ChatContainer msg={msg}/> : <ChatContainerCustomer msg={msg}/>
+        );
+
         return (
             <div id="chatContainer">
                 {chatList}
@@ -29,7 +33,7 @@ class ChatPage extends React.Component {
 }
 
 ChatPage.propTypes = {
-    chat: React.PropTypes.array.isRequired,
+    chat: React.PropTypes.array.isRequired
 };
 
 export default ChatPage;
