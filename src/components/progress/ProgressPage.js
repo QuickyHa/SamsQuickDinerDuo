@@ -1,7 +1,7 @@
 import React from 'react';
 import { TopNav } from '../common/Topnav';
 import { Chatbar } from '../common/Chatbar';
-import {ProgressPageTable} from './ProgressPageTable.js';
+import { ProgressPageTable } from './ProgressPageTable.js';
 
 class ProgressPage extends React.Component{
     render(){
