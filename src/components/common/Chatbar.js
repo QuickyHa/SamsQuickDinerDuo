@@ -6,7 +6,7 @@ export class Chatbar extends React.Component {
     render() {
         return (
             <div className="chatbar">
-                <Link to="custChat">Chat</Link>
+                <Link to="chat">Chat</Link>
             </div>
         );
     }

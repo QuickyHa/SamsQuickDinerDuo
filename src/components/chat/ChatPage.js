@@ -8,7 +8,6 @@ class ChatPage extends React.Component {
     render() {
         return (
             <div id="chatContainer">
-                <h1>test</h1><h1>test</h1><h1>test</h1><h1>test</h1><h1>test</h1><h1>test</h1>
                 <ChatContainer />
                 <ChatContainerCustomer />
                 <Chat />
