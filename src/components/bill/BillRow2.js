@@ -1,16 +1,14 @@
 import React from 'react';
+import {BillItem} from './BillItem';
+import {BillCount} from './BillCount';
 
 export class BillRow2 extends React.Component {
 
     render() {
         return (
             <div className = "billRow2">
-
-                <div className="billColumn billLeft" >
-                    <div className="billRow2"  style={divStyle}>
-                        <h3></h3>
-                    </div>                 
-                </div>
+                <BillItem />
+                <BillCount />
 
                 <div className ="billColumn middle" >
                     <div className="billRow2"  style={divStyle}>
