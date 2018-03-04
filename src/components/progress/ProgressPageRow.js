@@ -20,7 +20,7 @@ export class ProgressPageRow extends React.Component{
         switch (order.stat) {
             case 0:
                 status = "prepping";
-                statButton = <button className="cancel" onClick={this.delete}> &times; </button>;
+                statButton = <button id="testBegin" className="cancel" onClick={this.delete}> &times; </button>;
                 statText = "Preparing your order ";
                 break;
             case 1:
@@ -33,7 +33,7 @@ export class ProgressPageRow extends React.Component{
                 break;
             case 3:
                 status = "delivered";
-                statButton = <button className="pickup" onClick={this.delete}> &#10004; </button>;
+                statButton = <button id="testDone" className="pickup" onClick={this.delete}> &#10004; </button>;
                 statText = "Delievered (Call for plate pickup?) ";
                 break;
             default:
@@ -54,5 +54,4 @@ export class ProgressPageRow extends React.Component{
 
 ProgressPageRow.propTypes = {
     item: React.PropTypes.object.isRequired
-//,    onClick: React.PropTypes.func.isRequired
 };
