@@ -11,8 +11,9 @@ let order = [
 function moneyFormat(cost) { return "$" + parseFloat(Math.round(cost * 100) / 100).toFixed(2); }
 
 export class ProgressPageTable extends React.Component{
-
-    
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return(
