@@ -4,6 +4,10 @@
 
 /*---------- Welcome Page ----------------- */
 /* changed wrapper to welWrapper */
+html, body, #app, #app>div {
+    height: 100%;
+    margin: 0px;
+}
 .welWrapper{
     display: grid;
     height: 100%;
@@ -341,6 +345,71 @@ a{
 
 /* might change every h2 in the file which could mess stuff up */
 h2 { font-size: 25px;}
+/* ---------------------------progress page ----------*/
+/* changed table to progTable */
+.progTable {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.89);
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: rgb(0, 0, 0);
+    bottom: 10px;
+    border-style: double;
+    border-width: thick;
+    display: table;
+    width: 90%;
+    vertical-align: middle;
+    overflow: scroll;
+}
+
+/* changed row to progRow */
+.progRow {
+    display: table-row;
+    text-align: center;
+}
+/* changed row to progRow */
+.progRow > div {
+    float: left;
+    width: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(12, 6, 6);
+    border-bottom-width: 0;
+    padding: 5px;
+}
+/* changed row to progRow */
+.progRow:after {
+    content:"";
+    clear: both;
+}
+/* changed top to progTop */
+.progTop {
+    display: table-header-group;
+    background-color: rgb(128, 128, 128);
+    background-color: rgba(128, 128, 128, 0.712);
+    font-weight: bold;
+    font-size: 25px;
+}
+/*changed headers to progHeaders */
+.headers {
+    font-weight: bold;
+    font-size: 6vh;
+    color: white;
+}
+/* changed top to progTop */
+.progTop > div { border-bottom-width: thick; }
+
+/* might fuck something up idk*/
+button { font-size: 25px; }
+button:active { background-color: #DCDCDC; transform: translateY(4px); }
+
+.prepping { color: rgb(189, 125, 6);}
+.inProgress {  color: rgb(133, 124, 4); }
+.done { color: rgb(9, 109, 101); }
+.delivered { color: rgb(21, 92, 21); }
+.cancel { color: white; background-color: rgb(197, 7, 7)}
+.pickup {color: white; background-color: green;}
 
 /* -------------- chef page ---------------*/
 .wrapper{
