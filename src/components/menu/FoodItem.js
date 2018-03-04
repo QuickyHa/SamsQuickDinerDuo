@@ -68,7 +68,7 @@ export class FoodItem extends React.Component {
             <div className="column">
                 <div className="food">
                     <div>{order.name}</div>
-                    <div className={catClass}></div>
+                    <div id="testCat" className={catClass}></div>
                     <div className="bar">
                         <div className="num"> {this.state.count} </div>
                         <button className="minus" onClick={this.minus}> - </button>
