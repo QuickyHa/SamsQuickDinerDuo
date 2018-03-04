@@ -3,6 +3,49 @@ import { TopNav } from '../common/Topnav';
 import { Chatbar } from '../common/Chatbar';
 import { Categories } from './Categories';
 
+let items = [
+  [
+    {name: "Rare Steak", price: 4, soldOut: false},
+    {name: "Medium-Rare Steak", price: 20, soldOut: false},
+    {name: "Medium Steak", price: 6.9, soldOut: false}, 
+    {name: "Medium-Well Steak", price: 69.69, soldOut: false},  
+    {name: "Well-Done Steak", price: 420.69, soldOut: false}, 
+    {name: "Charcoal", price: 0.01, soldOut: false}
+  ],
+  [
+    {name: "Bacon Burger", price: 169, soldOut: false}, 
+    {name: "Canadian Ham Burger", price: 100, soldOut: false}, 
+    {name: "Pork Burger", price: 10, soldOut: false}, 
+    {name: "Burger Combo", price: 1, soldOut: false},  
+    {name: "Meat Burger", price: 0.10, soldOut: false}, 
+    {name: "A Sandwich", price: 0.01, soldOut: true}
+  ],
+  [
+    {name: "Potato", price: 1, soldOut: false}, 
+    {name: "Baked Potato", price: 2, soldOut: false}, 
+    {name: "Fried Potato", price: 3, soldOut: false}, 
+    {name: "Potato Chip", price: 4, soldOut: true},  
+    {name: "Fried French", price: 5, soldOut: false}, 
+    {name: "Healthy Potato", price: 69, soldOut: false}
+  ],
+  [
+    {name: "Water", price: 0, soldOut: false}, 
+    {name: "Flavored Water", price: 1, soldOut: true}, 
+    {name: "Colored Water", price: 2, soldOut: false}, 
+    {name: "Carbonated Water", price: 3, soldOut: false},  
+    {name: "Lemon Water", price: 4, soldOut: false}, 
+    {name: "Milk", price: 69, soldOut: false}
+  ],
+  [
+    {name: "Chocolate Cake", price: 0.42, soldOut: true}, 
+    {name: "Cheesecake", price: 0.24, soldOut: false}, 
+    {name: "Fruit Cake", price: 0.69, soldOut: false}, 
+    {name: "Cookie", price: 0.96, soldOut: false},  
+    {name: "Pizza", price: 0.99, soldOut: true}, 
+    {name: "French Fry", price: 0.01 , soldOut: false}
+  ]
+];
+
 class FoodMenu extends React.Component {
 
     render() {
