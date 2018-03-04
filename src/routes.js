@@ -13,7 +13,7 @@ export default (
         <IndexRoute component={WelcomePage} />
         <Route path="home" component={HomePage} />
         <Route path="menu" component={FoodMenu} />
-        <Route path="chat" component={ChatPage} />
+        <Route path="custChat" component={ChatPage} />
         <Route path="bill" component={BillPage} />
         <Route path="progress" component={ProgressPage} />
     </Route>
