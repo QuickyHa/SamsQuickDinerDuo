@@ -1,11 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-class WelcomePage extends React.Component{
+class WelcomePageTable extends React.Component{
     render(){
         return(
             <div className = "progTable">
-                <div></div>
+                <div className = "progRow progTop">
+                    <div className = ""
+                </div>
             </div>
         );
     }
