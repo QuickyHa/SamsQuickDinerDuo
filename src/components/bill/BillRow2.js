@@ -10,12 +10,6 @@ export class BillRow2 extends React.Component {
                 <BillItem />
                 <BillCount />
 
-                <div className ="billColumn middle" >
-                    <div className="billRow2"  style={divStyle}>
-                        <h3></h3>
-                    </div>
-                </div>
-
                 <div className="billColumn right">
                     <div className ="billRow2 sub1" >
                         <h1>$0.00</h1>    
