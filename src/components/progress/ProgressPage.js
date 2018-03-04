@@ -6,13 +6,23 @@ class WelcomePageTable extends React.Component{
         return(
             <div className = "progTable">
                 <div className = "progRow progTop">
-                    <div className = ""></div>
+                    <div>
+                        <h1 className = "headers"> Order </h1>
+                    </div>
+                    <div>
+                        <h1 className = "headers"> Status </h1>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
+class WelcomePageTableRow extends React.Component{
+    render(){
+        return;
+    }
+}
 
 
 
@@ -35,6 +45,7 @@ class WelcomePageTable extends React.Component{
         <h1 class=headers> Status </h1>
       </div>
     </div>
+    
     <div class=row>
         <div class=left>
             <h2 class=prepping> Lorem sed arcu posuere leo elit vulputate cras aenean neq suscipit dis ac Ipsum </h2>

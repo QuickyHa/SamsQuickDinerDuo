@@ -6,6 +6,7 @@ import HomePage from './components/home/HomePage';
 import FoodMenu from './components/menu/FoodMenu';
 import BillPage from './components/bill/BillPage';
 import ChatPage from './components/chat/ChatPage';
+import ProgressPage from './components/progress/ProgressPage';
 
 export default (
     <Route path="/" component={App}>
@@ -14,5 +15,6 @@ export default (
         <Route path="menu" component={FoodMenu} />
         <Route path="chat" component={ChatPage} />
         <Route path="bill" component={BillPage} />
+        <Route path="progress" component={ProgressPage} />
     </Route>
 );
