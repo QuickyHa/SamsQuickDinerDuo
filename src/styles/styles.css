@@ -352,7 +352,7 @@ h2 { font-size: 25px;}
     background-image: url('../images/Cooking.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: bottom right; >
+    background-position: bottom right;
 }
 /* changed table to progTable */
 .progTable {
