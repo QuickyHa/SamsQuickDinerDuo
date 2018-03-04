@@ -1,7 +1,7 @@
 import React from 'react';
 import { TopNav } from '../common/Topnav';
 import { Chatbar } from '../common/Chatbar';
-import { Link } from 'react-router';
+import {ProgressPageTable} from './ProgressPageTable.js';
 
 class ProgressPage extends React.Component{
     render(){
@@ -9,6 +9,7 @@ class ProgressPage extends React.Component{
             <div className = "progBG">   
                 <TopNav />
                 <Chatbar />
+                <ProgressPageTable />
             </div>
         );
     }
@@ -64,6 +65,7 @@ export default WelcomePageTable;
             </h2>
         </div>
     </div>
+    
     <div class=row>
         <div class=left>
             <h2 class=inProgress> Lorem sed arcu posuere leo elit vulputate cras aenean neq suscipit dis ac Ipsum </h2>
