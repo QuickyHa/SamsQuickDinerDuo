@@ -4,8 +4,7 @@ import React from 'react';
 class HomePage extends React.Component {
     
     login() {
-        window.location = "SecondPage.html";
-        return;
+        window.location = 'SecondPage.html';
     }
 
     render() {
@@ -15,7 +14,7 @@ class HomePage extends React.Component {
                     <h1 className= "message">Woulasdsadsto dine here today?</h1>
                 </div>	
                 <div className="button">
-                    <a href={this.login} className="button1">YES</a>
+                    <button onClick={this.login} className="button1">YES</button>
                 </div>
             </div>
         );
