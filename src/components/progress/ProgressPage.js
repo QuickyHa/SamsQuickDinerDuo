@@ -6,7 +6,7 @@ class WelcomePageTable extends React.Component{
         return(
             <div className = "progTable">
                 <div className = "progRow progTop">
-                    <div className = ""
+                    <div className = ""></div>
                 </div>
             </div>
         );
