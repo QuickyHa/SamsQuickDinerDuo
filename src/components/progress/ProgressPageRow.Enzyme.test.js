@@ -18,10 +18,31 @@ describe('ProgressPage via Enzyme', () => {
     expect(wrapper.find('div').length).toBe(3);
     expect(wrapper.find('h2').length).toBe(2);
   });
+  
+  it('changes state when delete() is called', () => {
+    const wrapper = setup(0);
+    const statusInit = wrapper.state().deleted;
+    expect(statusInit).toEqual(false);
+    wrapper.instance().delete();
+    const statusFinal = wrapper.state().deleted;
+    expect(statusFinal).toEqual(true);
+  });
 
   it('has a correctly styled button when on first stage (i.e. "cancel" class)', () => {
     const wrapper = setup(0);
     expect(wrapper.find('#testBegin').prop('className')).toEqual("cancel");
+  });
+
+  it('has correct style for status "inProgress"', () => {
+    const wrapper = setup(1);
+    expect(wrapper.find('#nameID').prop('className')).toEqual("inProgress");
+    expect(wrapper.find('#statusID').prop('className')).toEqual("inProgress");
+  });
+
+  it('has correct style for status "done"', () => {
+    const wrapper = setup(2);
+    expect(wrapper.find('#nameID').prop('className')).toEqual("done");
+    expect(wrapper.find('#statusID').prop('className')).toEqual("done");
   });
 
   it('has a correctly styled button when on last stage (i.e. "pickup" class)', () => {
@@ -29,4 +50,18 @@ describe('ProgressPage via Enzyme', () => {
     expect(wrapper.find('#testDone').prop('className')).toEqual("pickup");
   });
 
+  it('has a correctly styled button when on first stage (i.e. "cancel" class)', () => {
+    const wrapper = setup(0);
+    expect(wrapper.find('#testBegin').prop('className')).toEqual("cancel");
+  });
+
+  it('has a correctly styled button when on last stage (i.e. "done" class)', () => {
+    const wrapper = setup(3);
+    expect(wrapper.find('#testDone').prop('className')).toEqual("pickup");
+  });
+
+  it('has a correctly styled button when on last stage (i.e. "inProgress" class)', () => {
+    const wrapper = setup(3);
+    expect(wrapper.find('#testDone').prop('className')).toEqual("pickup");
+  });
 });

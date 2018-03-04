@@ -42,10 +42,10 @@ export class ProgressPageRow extends React.Component{
         return (
             <div className= "progRow">
                 <div>
-                    <h2 className={status}>{order.name}</h2>
+                    <h2 id="nameID" className={status}>{order.name}</h2>
                 </div>
                 <div>
-                    <h2 className={status}>{statText}{statButton}</h2>
+                    <h2 id="statusID" className={status}>{statText}{statButton}</h2>
                 </div>
             </div> 
         );
