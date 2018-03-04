@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router';
-import WelcomePage from '../welcome/WelcomePage';
+import { TopNav } from '../common/Topnav';
+import { Chatbar } from '../common/Chatbar';
+import { Link } from 'react-router';
 
 class ProgressPage extends React.Component{
     render(){
@@ -10,7 +11,7 @@ class ProgressPage extends React.Component{
                 <Chatbar />
             </div>
         );
-    };
+    }
 }
 
 export default ProgressPage;
