@@ -1,7 +1,9 @@
 import React from 'react';
 import { TopNav } from '../common/Topnav';
 import { Chatbar } from '../common/Chatbar';
+import { CatHeader } from './CatHeader';
 import { Categories } from './Categories';
+import { FoodItem } from './FoodItem';
 
 let items = [
   [
@@ -51,14 +53,20 @@ class FoodMenu extends React.Component {
     render() {
         return (
             <div className="menuBG">
-              <TopNav />
+            <TopNav />
               <div className="table">
                 <CatHeader />
-                <div class="row">
+                <div className="row">
                   <Categories />
+                  <FoodItem />
+                  <FoodItem />
+                  <FoodItem />
+                  <FoodItem />
+                  <FoodItem />
+                  <FoodItem />
                 </div>
               </div>
-              <Chatbar />
+            <Chatbar />
             </div>
         );
     }
