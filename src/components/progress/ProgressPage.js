@@ -1,6 +1,21 @@
 import React from 'react';
 import {Link} from 'react-router';
+import WelcomePage from '../welcome/WelcomePage';
 
+class ProgressPage extends React.Component{
+    render(){
+        return(
+            <div className = "progBG">   
+                <TopNav />
+                <Chatbar />
+            </div>
+        );
+    };
+}
+
+export default ProgressPage;
+
+/*
 class WelcomePageTable extends React.Component{
     render(){
         return(
@@ -18,16 +33,8 @@ class WelcomePageTable extends React.Component{
     }
 }
 
-class WelcomePageTableRow extends React.Component{
-    render(){
-        return;
-    }
-}
-
-
-
-
-
+export default WelcomePageTable;
+*/
 
 /*
 <body>
@@ -45,7 +52,7 @@ class WelcomePageTableRow extends React.Component{
         <h1 class=headers> Status </h1>
       </div>
     </div>
-    
+
     <div class=row>
         <div class=left>
             <h2 class=prepping> Lorem sed arcu posuere leo elit vulputate cras aenean neq suscipit dis ac Ipsum </h2>

@@ -345,6 +345,15 @@ a{
 /* might change every h2 in the file which could mess stuff up */
 h2 { font-size: 25px;}
 /* ---------------------------progress page ----------*/
+
+.progBG {
+    background-color: #ffffff;
+    background-size: cover;
+    background-image: url('../images/Cooking.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom right; >
+}
 /* changed table to progTable */
 .progTable {
     background-color: white;
