@@ -21,10 +21,10 @@ export class BillRow2 extends React.Component {
                         <h1>$0.00</h1>    
                     </div>
                     <div className ="billRow2 sub2">
-                        <button className="tip" onClick="tip(0.10)">Tip 10%</button>
-                        <button className="tip" onClick="tip(0.15)">Tip 15%</button>
-                        <button className="tip" onClick="tip(0.20)">Tip 20%</button>
-                        <button className="tip" onClick="tip(0)">No Tip </button>
+                        <button className="tip" onClick={this.tip10}>Tip 10%</button>
+                        <button className="tip" onClick={this.tip15}>Tip 15%</button>
+                        <button className="tip" onClick={this.tip20}>Tip 20%</button>
+                        <button className="tip" onClick={this.tip0}>No Tip </button>
                         <h3 >Total:$0.00</h3>
                     </div>
                     <div className ="billRow2 sub3">
