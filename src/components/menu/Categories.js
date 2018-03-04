@@ -49,12 +49,13 @@ function moneyFormat(cost) { return "$" + parseFloat(Math.round(cost * 100) / 10
 export class Categories extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { category: 0 };
+      this.state = { category: 0,  bill: 0};
       this.toEntrees = this.toEntrees.bind(this);
       this.toBurgers = this.toBurgers.bind(this);
       this.toSides = this.toSides.bind(this);
       this.toDrinks = this.toDrinks.bind(this);
       this.toDesserts = this.toDesserts.bind(this);
+      this.buy = this.buy.bind(this);
     }
 
     toEntrees() { this.setState({category: 0}); }
@@ -62,6 +63,12 @@ export class Categories extends React.Component {
     toSides() { this.setState({category: 2}); }
     toDrinks() { this.setState({category: 3}); }
     toDesserts() { this.setState({category: 4}); }
+
+    buy(cost) {
+      let currBill = this.state.bill;
+      let newBill = currBill + cost;
+      this.setState({ bill: newBill});
+    }
 
     render() {
         let soldOutImg = "../images/sold_out.png";
@@ -74,25 +81,20 @@ export class Categories extends React.Component {
               <h2 className="category" onClick={this.toDrinks}> Drinks </h2>
               <h2 className="category" onClick={this.toDesserts}> Desserts </h2>
               <div className="bill">
-                <p id="totalBill"> Estimated bill: {moneyFormat(this.props.bill)} </p>
+                <p id="totalBill"> Estimated bill: {moneyFormat(this.state.bill)} </p>
               </div>
             </div>
-            <FoodItem item={items[this.state.category][0]} category={this.state.category}/>
-            <FoodItem item={items[this.state.category][1]} category={this.state.category}/>
-            <FoodItem item={items[this.state.category][2]} category={this.state.category}/>
-            <FoodItem item={items[this.state.category][3]} category={this.state.category}/>
-            <FoodItem item={items[this.state.category][4]} category={this.state.category}/>
-            <FoodItem item={items[this.state.category][5]} category={this.state.category}/>
+            <FoodItem item={items[this.state.category][0]} category={this.state.category} onBuy={this.buy}/>
+            <FoodItem item={items[this.state.category][1]} category={this.state.category} onBuy={this.buy}/>
+            <FoodItem item={items[this.state.category][2]} category={this.state.category} onBuy={this.buy}/>
+            <FoodItem item={items[this.state.category][3]} category={this.state.category} onBuy={this.buy}/>
+            <FoodItem item={items[this.state.category][4]} category={this.state.category} onBuy={this.buy}/>
+            <FoodItem item={items[this.state.category][5]} category={this.state.category} onBuy={this.buy}/>
           </div>
         );
     }
 }
 
-Categories.propTypes = {
-    bill: React.PropTypes.number
-};
-
-Categories.defaultProps = { bill: 0.00 };
 /*
             <div className="row">
               <div className="left">

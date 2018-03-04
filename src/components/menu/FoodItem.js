@@ -3,6 +3,39 @@ import React from 'react';
 function moneyFormat(cost) { return "$" + parseFloat(Math.round(cost * 100) / 100).toFixed(2); }
 
 export class FoodItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { count: 0 };
+        this.minus = this.minus.bind(this);
+        this.plus = this.plus.bind(this);
+        this.handleBuy = this.handleBuy.bind(this);
+    }
+
+    minus() {
+        let newCount = this.state.count-1;
+        if (newCount >= 0) this.setState({ count: newCount });
+    }
+
+    plus() {
+        let newCount = this.state.count+1;
+        this.setState({ count: newCount });
+    }
+
+    handleBuy() {
+        const cCount = this.state.count;
+        if (this.props.item.soldOut) {
+            alert("Sorry! This item is unavailable.");
+            return;
+        }
+        if (cCount === 0) {
+            alert("Please order at least 1 item.");
+            return;
+        }
+        const cPrice = this.props.item.price;
+        const currTotal = cCount * cPrice;
+        this.props.onBuy(currTotal);
+        this.setState({ count: 0 });
+    }
 
     render() {
         let order = this.props.item;
@@ -37,11 +70,11 @@ export class FoodItem extends React.Component {
                     <div>{order.name}</div>
                     <div className={catClass}></div>
                     <div className="bar">
-                        <div className="num"> 0 </div>
-                        <button className="minus"> - </button>
-                        <button className="plus"> + </button>
+                        <div className="num"> {this.state.count} </div>
+                        <button className="minus" onClick={this.minus}> - </button>
+                        <button className="plus" onClick={this.plus}> + </button>
                         <div className="price" > {moneyFormat(order.price)} </div>
-                        <button className="confirm"> &#10004; </button>
+                        <button className="confirm" onClick={this.handleBuy}> &#10004; </button>
                     </div>
                 </div>
             </div>
@@ -51,7 +84,8 @@ export class FoodItem extends React.Component {
 
 FoodItem.propTypes = {
     item: React.PropTypes.object.isRequired,
-    category: React.PropTypes.number
+    category: React.PropTypes.number,
+    onBuy: React.PropTypes.func.isRequired
 };
 
 FoodItem.defaultProps = { category: 0 };
