@@ -3,14 +3,81 @@
 /* mainmenu and progresspage have 90% height */
 html, body, #app, #app>div {
     height: 100%;
+    margin: 0 auto;
 }
+/*-------custChat page ----------*/
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+    width: 50%;
+    float: left;
+}
+
+.customer {
+    border-color: #ccc;
+    background-color: #ddd;
+    float: right;
+}
+
+.container > p { 
+    text-align: center;
+    margin-left: 20px;
+    font-size: 150%;
+    word-wrap: break-word;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat {
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    background-color: #333;
+}
+
+.text {
+    border-width: 3px;
+    font-size: 16pt;
+    position: relative;
+    float: left;
+    left: 40%;
+}
+
+.reset {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    float: left;
+    margin: auto;
+    margin-left: 5px;
+    font-size: 16pt;
+    left: 40%;
+    background-color: #333;
+    border: none;
+    top: 2px;
+  }
+  
+  .reset:hover {
+    color:rgb(173, 226, 173);
+  }
+  
+  .reset:active{
+    color:rgb(236, 222, 222);
+    color:rgba(236, 222, 222, 0.486);
+  }
+
 
 /*---------- Welcome Page ----------------- */
 /* changed wrapper to welWrapper */
-html, body, #app, #app>div {
-    height: 100%;
-    margin: 0px;
-}
 .welWrapper{
     display: grid;
     height: 100%;
@@ -222,22 +289,24 @@ a{
 }
 
 /* ------------ food menu --------------*/
-.menuBG {
+.menuBG  {
     width: 100%;
     height: 100%;
     background-image: url('../images/table.jpg');
     background-size: cover;
-    top: 0;
 }
+
 .table {
-    margin: auto;
     margin-top: 60px;
     margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
     color: rgb(0, 0, 0);
     bottom: 10px;
     display: table;
     width: 1050px;
-    vertical-align: middle;
+    height: auto;
+    position: relative;
     overflow: scroll;
 }
 
