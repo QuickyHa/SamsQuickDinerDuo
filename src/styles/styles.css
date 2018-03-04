@@ -240,6 +240,8 @@ a{
     width: 1050px;
     vertical-align: middle;
     overflow: scroll;
+    background-image: url('../images/table.jpg');
+    background-size: cover;
 }
 
 .row {
