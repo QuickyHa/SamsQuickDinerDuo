@@ -1,6 +1,7 @@
 import React from 'react';
 import { TopNav } from '../common/Topnav';
 import { Chatbar } from '../common/Chatbar';
+import { Link } from 'react-router';
 
 
 class HomePage extends React.Component {
@@ -9,10 +10,10 @@ class HomePage extends React.Component {
         return (
             <div className="homeBG">
             <TopNav />
-                <div className="buttons">
-                    <a href="foodmenu.html">MENU</a>
-                    <a href="ProgressPage.html">PROGRESS</a>
-                    <a href="BillPage.html">BILL</a>
+                <div className="homeButt">
+                    <Link to="menu"> Menu </Link>
+                    <Link to="progress"> Progress </Link>
+                    <Link to="bill"> Bill </Link>
                 </div>
             <Chatbar />
             </div>

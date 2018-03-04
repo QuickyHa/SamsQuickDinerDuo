@@ -1,10 +1,20 @@
 import React from 'react';
-import { SideNav } from './Sidenav';
+import {Link} from 'react-router';
 
 export class TopNav extends React.Component {
-    
+    constructor(props) {
+        super(props);
+        this.state = { open: false };
+        this.openNav = this.openNav.bind(this);
+        this.closeNav = this.closeNav.bind(this);
+    }
+
+    closeNav (){
+        this.setState({ width: 0 + "px" });
+    }
+
     openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+        this.setState({ width: 250 + "px" });
     }
 
     render() {
@@ -13,7 +23,13 @@ export class TopNav extends React.Component {
                 <div text-decoration="none" className="topnav">
                     <a className="dropdown" href="javascript:void(0)" onClick={this.openNav}>&#9776;</a>
                 </div>
-                <SideNav />
+                <div style={{width: this.state.width}} className="sidenav">
+                    <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
+                    <Link to="home"> Home </Link>
+                    <Link to="menu"> Menu </Link>
+                    <Link to="progress"> Progress </Link>
+                    <Link to="bill"> Bill </Link>
+                </div>
             </div>
         );
     }
