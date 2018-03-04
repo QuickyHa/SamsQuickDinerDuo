@@ -61,6 +61,9 @@ class FoodMenu extends React.Component {
                   <FoodItem />
                   <FoodItem />
                   <FoodItem />
+                  <br/><br/><br/><br/>
+                  <br/><br/><br/><br/>
+                  <br/><br/><br/><br/><br/>
                   <FoodItem />
                   <FoodItem />
                   <FoodItem />
