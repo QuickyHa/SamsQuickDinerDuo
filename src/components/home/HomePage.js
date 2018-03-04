@@ -1,4 +1,5 @@
 import React from 'react';
+import TopNav from '../common/Topnav'
 
 
 class HomePage extends React.Component {
@@ -9,6 +10,8 @@ class HomePage extends React.Component {
 
     render() {
         return (
+            <div>
+            <TopNav />
             <div className="wrapper">
                 <div className="welcome">
                     <h1 className= "message">Woulasdsadsto dine here today?</h1>
@@ -16,6 +19,7 @@ class HomePage extends React.Component {
                 <div className="button">
                     <button onClick={this.login} className="button1">YES</button>
                 </div>
+            </div>
             </div>
         );
     }

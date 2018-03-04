@@ -429,7 +429,7 @@ h3{
   }
   
 /* from foodmenu.css idk if this will break other pages */
-/** Mobile */
+/** Mobile 
 @media only screen and (max-width: 767px)  {
     .table { display: none; }
     .mobile {
@@ -465,3 +465,4 @@ h3{
     .headers{font-size:20px;}
     button{ font-size: 15px;}
 }
+*/
