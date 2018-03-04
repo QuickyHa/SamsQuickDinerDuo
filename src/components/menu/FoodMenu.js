@@ -53,7 +53,10 @@ class FoodMenu extends React.Component {
             <div className="menuBG">
               <TopNav />
               <div className="table">
-                <Categories />
+                <CatHeader />
+                <div class="row">
+                  <Categories />
+                </div>
               </div>
               <Chatbar />
             </div>
