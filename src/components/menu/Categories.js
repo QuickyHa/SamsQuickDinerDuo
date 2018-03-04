@@ -22,7 +22,7 @@ export class Categories extends React.Component {
                 <h2 className="category" onClick={() => this.changeCategory(3)}> Drinks </h2>
                 <h2 className="category" onClick={() => this.changeCategory(4)}> Desserts </h2>
                 <div className="bill">
-                  <p id="totalBill"> Estimated bill: <br /> $0.00 </p>
+                  <p id="totalBill"> Estimated bill: <br /> {this.props.bill} </p>
                 </div>
               </div>
             </div>
@@ -30,6 +30,12 @@ export class Categories extends React.Component {
         );
     }
 }
+
+Categories.propTypes = {
+    bill: React.PropTypes.number
+};
+
+Categories.defaultProps = { bill: "$0.00" };
 
 
 /*

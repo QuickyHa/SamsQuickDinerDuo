@@ -223,7 +223,13 @@ a{
 
 /* ------------ food menu --------------*/
 .mobile { display: none; }
-
+.menuBG {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/table.jpg');
+    background-size: cover;
+    top: 0;
+}
 .table {
     background-color: rgb(255, 255, 255);
     margin: auto;

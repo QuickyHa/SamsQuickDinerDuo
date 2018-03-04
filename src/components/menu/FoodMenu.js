@@ -51,11 +51,11 @@ class FoodMenu extends React.Component {
     render() {
         return (
             <div className="menuBG">
-                <TopNav />
-                <div className="table">
-                  <Categories />
-                </div>
-                <Chatbar />
+              <TopNav />
+              <div className="table">
+                <Categories />
+              </div>
+              <Chatbar />
             </div>
         );
     }
