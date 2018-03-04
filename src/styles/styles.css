@@ -18,7 +18,7 @@ html, body { height: 100%; margin: 0;}
     display: grid;
     background-image: url('../images/mtable.jpg');
     background-size: cover;
-    height: 80%;
+    height: 100%;
     width: 100%
 }
 /* changed button class name */
@@ -54,7 +54,7 @@ a{
     font-weight:400;
     color:rgb(255, 255, 255);
     text-align: center;
-    transition: all 0.15s;  
+    transition: all 0.15s;
 }
 
 .button1:hover{
