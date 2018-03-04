@@ -20,7 +20,7 @@ class ChatPage extends React.Component {
     render() {
         let currChat = this.state.chat;
         let chatList = currChat.map((msg, i) =>
-            (i%2 === 0) ? <ChatContainer msg={msg}/> : <ChatContainerCustomer msg={msg}/>
+            (i%2 === 0) ? <ChatContainerCustomer msg={msg}/> : <ChatContainer msg={msg}/>
         );
 
         return (

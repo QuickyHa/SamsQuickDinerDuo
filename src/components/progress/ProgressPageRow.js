@@ -13,7 +13,7 @@ export class ProgressPageRow extends React.Component{
 
     render(){
         if (this.state.deleted) return(null);
-        let order = JSON.parse(this.props.item);
+        let order = this.props.item;
         let status;
         let statText;
         let statButton = "";

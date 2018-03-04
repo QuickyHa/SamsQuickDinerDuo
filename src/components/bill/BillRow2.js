@@ -5,14 +5,13 @@ import {BillCount} from './BillCount';
 export class BillRow2 extends React.Component {
 
     render() {
+        let itemList = this.props.countedOrders.map((ord) => <div key={ord.name}><BillItem name={ord.name}/><BillCount count={ord.count}/></div>);
         return (
             <div className = "billRow2">
-                <BillItem />
-                <BillCount />
-
+                {itemList}
                 <div className="billColumn right">
                     <div className ="billRow2 sub1" >
-                        <h1>$0.00</h1>    
+                        <h1>${this.props.subtotal}</h1>    
                     </div>
                     <div className ="billRow2 sub2">
                         <button className="tip" onClick={this.tip10}>Tip 10%</button>
@@ -32,6 +31,9 @@ export class BillRow2 extends React.Component {
     }
 }
 
-const divStyle = {
-    display: 'none'
+BillRow2.propTypes = {
+    subtotal: React.PropTypes.number,
+    countedOrders: React.PropTypes.array
 };
+
+BillRow2.defaultProps = { subtotal: 0, countedOrders: []};

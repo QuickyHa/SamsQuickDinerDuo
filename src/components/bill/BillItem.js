@@ -5,13 +5,15 @@ export class BillItem extends React.Component{
         return (
             <div className="billColumn billLeft" >
                 <div className="billRow2" >
-                    <h3></h3>
+                    <h3>{this.props.name}</h3>
                 </div>                 
             </div>
         );
     }
 }
 
-const divStyle = {
-    display: 'none'
+BillItem.propTypes = {
+    name: React.PropTypes.string
 };
+
+BillItem.defaultProps = { name: '' };

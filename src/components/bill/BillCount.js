@@ -5,13 +5,15 @@ export class BillCount extends React.Component{
         return (
             <div className="billColumn middle" >
                 <div className="billRow2">
-                    <h3></h3>
+                    <h3>x{this.props.count}</h3>
                 </div>                 
             </div>
         );
     }
 }
 
-const divStyle = {
-    display: 'none'
+BillCount.propTypes = {
+    count: React.PropTypes.number
 };
+
+BillCount.defaultProps = { count: 0 };
