@@ -383,13 +383,21 @@ a{
     background-image: url('../images/order3.jpg');
     background-size: cover;
     height: 125px;
+    background-position: center;
 }
 
-.out .img {
+.out {
     background-image: url('../images/sold_out.png');
     background-size: 175px;
+    background-position: center;
     background-repeat: no-repeat;
 }
+
+.entree { background-image: url('../images/entree.jpg'); }
+.burger { background-image: url('../images/order3.jpg'); }
+.side { background-image: url('../images/side.jpg'); }
+.drink { background-image: url('../images/drink.jpg'); }
+.dessert { background-image: url('../images/dessert.jpg'); }
 
 .bar {
     overflow: hidden;

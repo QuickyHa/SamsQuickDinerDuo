@@ -5,10 +5,8 @@ let order = [
     {name: "Rare Steak", price: 4.00, stat: 0},
     {name: "Colored Water", price: 2.00, stat: 1},
     {name: "A Sandwich", price: 0.01, stat: 2},
-    {name: "Canadian Ham Burger", price: 100.00, stat: 3}
+    {name: "Canadian Burger", price: 100.00, stat: 3}
 ];
-
-function moneyFormat(cost) { return "$" + parseFloat(Math.round(cost * 100) / 100).toFixed(2); }
 
 export class ProgressPageTable extends React.Component{
     constructor(props) {
