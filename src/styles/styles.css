@@ -54,7 +54,7 @@ a{
     font-weight:400;
     color:rgb(255, 255, 255);
     text-align: center;
-    transition: all 0.15s;
+    transition: all 0.15s;  
 }
 
 .button1:hover{
