@@ -8,12 +8,26 @@ export class Categories extends React.Component {
 
     render() {
         return (
-            <div>
-            <div className="row top">
-              <div className="left">
-                <h1 className="headers"> Categories </h1>
-              </div>
+          <div className="left">
+            <h2 className="category" onClick={() => this.changeCategory(0)}> Entrees </h2>
+            <h2 className="category" onClick={() => this.changeCategory(1)}> Burgers </h2>
+            <h2 className="category" onClick={() => this.changeCategory(2)}> Sides </h2>
+            <h2 className="category" onClick={() => this.changeCategory(3)}> Drinks </h2>
+            <h2 className="category" onClick={() => this.changeCategory(4)}> Desserts </h2>
+            <div className="bill">
+              <p id="totalBill"> Estimated bill: <br /> {this.props.bill} </p>
             </div>
+          </div>
+        );
+    }
+}
+
+Categories.propTypes = {
+    bill: React.PropTypes.number
+};
+
+Categories.defaultProps = { bill: "$0.00" };
+/*
             <div className="row">
               <div className="left">
                 <h2 className="category" onClick={() => this.changeCategory(0)}> Entrees </h2>
@@ -26,17 +40,7 @@ export class Categories extends React.Component {
                 </div>
               </div>
             </div>
-            </div>
-        );
-    }
-}
-
-Categories.propTypes = {
-    bill: React.PropTypes.number
-};
-
-Categories.defaultProps = { bill: "$0.00" };
-
+            */
 
 /*
   <div class=table>
