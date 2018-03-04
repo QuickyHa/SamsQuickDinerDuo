@@ -1,4 +1,5 @@
 import React from 'react';
+import {FoodItem} from './FoodItem';
 
 export class Categories extends React.Component {
 
@@ -8,15 +9,23 @@ export class Categories extends React.Component {
 
     render() {
         return (
-          <div className="left">
-            <h2 className="category" onClick={() => this.changeCategory(0)}> Entrees </h2>
-            <h2 className="category" onClick={() => this.changeCategory(1)}> Burgers </h2>
-            <h2 className="category" onClick={() => this.changeCategory(2)}> Sides </h2>
-            <h2 className="category" onClick={() => this.changeCategory(3)}> Drinks </h2>
-            <h2 className="category" onClick={() => this.changeCategory(4)}> Desserts </h2>
-            <div className="bill">
-              <p id="totalBill"> Estimated bill: <br /> {this.props.bill} </p>
+          <div className = "row">
+            <div className="left">
+              <h2 className="category" onClick={() => this.changeCategory(0)}> Entrees </h2>
+              <h2 className="category" onClick={() => this.changeCategory(1)}> Burgers </h2>
+              <h2 className="category" onClick={() => this.changeCategory(2)}> Sides </h2>
+              <h2 className="category" onClick={() => this.changeCategory(3)}> Drinks </h2>
+              <h2 className="category" onClick={() => this.changeCategory(4)}> Desserts </h2>
+              <div className="bill">
+                <p id="totalBill"> Estimated bill: {this.props.bill} </p>
+              </div>
             </div>
+            <FoodItem />
+            <FoodItem />
+            <FoodItem />
+            <FoodItem />
+            <FoodItem />
+            <FoodItem />
           </div>
         );
     }

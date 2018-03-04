@@ -1,9 +1,7 @@
 import React from 'react';
 import { TopNav } from '../common/Topnav';
 import { Chatbar } from '../common/Chatbar';
-import { CatHeader } from './CatHeader';
-import { Categories } from './Categories';
-import { FoodItem } from './FoodItem';
+import {FoodMenuTable} from './FoodMenuTable';
 
 let items = [
   [
@@ -53,23 +51,9 @@ class FoodMenu extends React.Component {
     render() {
         return (
             <div className="menuBG">
-            <TopNav />
-              <div className="table">
-                <CatHeader />
-                <div className="row">
-                  <Categories />
-                  <FoodItem />
-                  <FoodItem />
-                  <FoodItem />
-                  <br/><br/><br/><br/>
-                  <br/><br/><br/><br/>
-                  <br/><br/><br/><br/><br/>
-                  <FoodItem />
-                  <FoodItem />
-                  <FoodItem />
-                </div>
-              </div>
-            <Chatbar />
+              <TopNav />
+              <FoodMenuTable />
+              <Chatbar />
             </div>
         );
     }
@@ -273,6 +257,7 @@ if(!alreadyCalled){
   <div class=topnav>
     <a class=dropdown href="javascript:void(0)" onclick="openNav()">&#9776;</a>
   </div>
+
   <div class=mobile>
     <div class=row>
       <div class=left>
@@ -287,6 +272,7 @@ if(!alreadyCalled){
       </div>
     </div>
   </div>
+
   <div class=table>
     <div class="row top">
       <div class=left>
